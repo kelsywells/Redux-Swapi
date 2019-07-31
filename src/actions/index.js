@@ -1,5 +1,5 @@
 import { axios } from 'axios';
-export const FETCH_PEOPLE_SUCCESS = "FETCH_PEOPE_SUCCESS";
+export const FETCH_PEOPLE_SUCCESS = "FETCH_PEOPLE_SUCCESS";
 export const FETCH_PEOPLE_FAIL = "FETCH_PEOPLE_FAIL";
 export const FETCH_PEOPLE_START = "FETCH_PEOPLE_START";
 
@@ -22,7 +22,7 @@ export const getPeople = () => {
                 type: FETCH_PEOPLE_SUCCESS,
                 payload: res.data.url
             }))
-            .catch(err=> dispatch({
+            .catch(err => dispatch({
                 type: FETCH_PEOPLE_FAIL,
                 payload: err.stack
             }))
